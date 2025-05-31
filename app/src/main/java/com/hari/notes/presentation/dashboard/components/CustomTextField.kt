@@ -34,6 +34,7 @@ fun CustomTextField(value: String, hint: String, modifier: Modifier, onValueChan
                 focusedIndicatorColor = Color.Transparent,
                 unfocusedIndicatorColor = Color.Transparent,
             ),
+            maxLines = 5,
             placeholder = {
                 Text(text = hint)
             }

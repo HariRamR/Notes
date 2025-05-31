@@ -8,7 +8,7 @@ plugins {
 
 android {
     namespace = "com.hari.notes"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.hari.notes"
@@ -41,6 +41,10 @@ android {
     }
 }
 
+ksp {
+    arg("room.schemaLocation", "$projectDir/schemas")
+}
+
 dependencies {
 
     implementation(libs.androidx.core.ktx)
@@ -63,7 +67,7 @@ dependencies {
     implementation(libs.androidx.navigation3.runtime)
     implementation(libs.androidx.navigation3.ui)
 //    implementation(libs.androidx.lifecycle.viewmodel.navigation3)
-    implementation(libs.androidx.material3.navigation3)
+//    implementation(libs.androidx.material3.navigation3)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

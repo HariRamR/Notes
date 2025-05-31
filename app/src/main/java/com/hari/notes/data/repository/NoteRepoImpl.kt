@@ -8,7 +8,7 @@ import kotlinx.coroutines.flow.Flow
 class NoteRepoImpl(
     private val noteDAO: NoteDAO
 ): NoteRepo {
-    override suspend fun getNotes(): Flow<List<Note>> {
+    override fun getNotes(): Flow<List<Note>> {
         return noteDAO.getNotes()
     }
 
